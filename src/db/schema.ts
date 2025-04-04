@@ -8,5 +8,6 @@ export const transactions = pgTable("transactions", {
   description: text().notNull(),
   amount: numeric().notNull(),
   type: transactionsTypeEnum().notNull(),
+  category: text("category"),
   ...timestamps,
 });
